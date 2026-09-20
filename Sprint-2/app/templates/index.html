@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carga y Optimización de Imagen</title>
+</head>
+<body>
+    <h2>Formulario de Carga</h2>
+    <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <label for="title">Título de la imagen:</label><br>
+        <input type="text" id="title" name="title"><br><br>
+
+        <label for="image">Selecciona una imagen:</label><br>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+        <button type="submit">Subir y Optimizar</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/validation.js') }}"></script>
+</body>
+</html>
